@@ -21,9 +21,6 @@ function mousePressed() {
 }
 
 function draw() {
-  erase();
-    ellipse(width / 2, height / 2, 10 + rms * 200, 10 + rms * 200);
-    noErase();
     // Get the average (root mean square) amplitude
     let rms = 0
     if (analyzer.getLevel()){
@@ -31,6 +28,10 @@ function draw() {
     }
     fill(127);
     stroke(0);
-ellipse(width / 2, height / 2, 10 + rms * 200, 10 + rms * 200);
+
     // Draw an ellipse with size based on volume
+    ellipse(width / 2, height / 2, 10 + rms * 200, 10 + rms * 200); 
+    erase();
+    ellipse(width / 2, height / 2, 10 + rms * 200, 10 + rms * 200);
+    noErase();
 }
