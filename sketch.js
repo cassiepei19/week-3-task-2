@@ -1,5 +1,4 @@
 let beat, analyzer; 
-ellipse(width / 2, height / 2, 10 + rms * 200, 10 + rms * 200);
 // Load sound file before canvas loads so it is ready
 function preload() {
     beat = loadSound('RatAtat_155.mp3');
@@ -32,6 +31,6 @@ function draw() {
     }
     fill(127);
     stroke(0);
-
+ellipse(width / 2, height / 2, 10 + rms * 200, 10 + rms * 200);
     // Draw an ellipse with size based on volume
 }
